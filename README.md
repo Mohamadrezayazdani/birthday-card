@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>کارت تولد</title>
 <style>
   body {
     font-family: Tahoma, sans-serif;
@@ -35,22 +29,20 @@
     font-size: 1.8rem;
   }
 </style>
-</head>
-<body>
 
-  <div class="timer">
-    <div id="days" class="time-part">-- روز</div>
-    <div id="hours" class="time-part">-- ساعت</div>
-    <div id="minutes" class="time-part">-- دقیقه</div>
-    <div id="seconds" class="time-part">-- ثانیه</div>
-  </div>
+<div class="timer">
+  <div id="days" class="time-part">-- روز</div>
+  <div id="hours" class="time-part">-- ساعت</div>
+  <div id="minutes" class="time-part">-- دقیقه</div>
+  <div id="seconds" class="time-part">-- ثانیه</div>
+</div>
 
-  <div id="message">تولدت مبارک عمر داداش</div>
+<div id="message">تولدت مبارک عمر داداش</div>
 
 <script>
   function updateCountdown() {
     const now = new Date();
-    const target = new Date(now.getFullYear(), 9, 11, 0, 0, 0); // 11 دی (ماه 9 یعنی دی)
+    const target = new Date(now.getFullYear(), 9, 11, 0, 0, 0);
     if (now > target) target.setFullYear(target.getFullYear() + 1);
 
     const diff = target - now;
@@ -69,6 +61,3 @@
   setInterval(updateCountdown, 1000);
   updateCountdown();
 </script>
-
-</body>
-</html>
